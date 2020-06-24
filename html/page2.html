@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Prototype</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../styles/style_pages.css">
+		<link rel="icon" type="image/png" href="../images/accueil/favicon/favicon.ico" />
+	</head>
+	<body>
+		<header>
+			<p id="btn_acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Acceuil"></a></p>
+			<p id="btn_menu"><img src="../images/menu/menu.png" alt="Menu"></p>
+		</header>
+		<nav id="menu_nav" class="menu_nav">
+			<ul id="menu_ul">
+				<li id="acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Icône" id="icn_acceuil">Acceuil</a></li>
+				<li class="menu_l1">					
+					<a href="page1.html" id="lien1">Organisation</a>
+					<ul id="slien1">
+						<li><a href="page1.html#b1">Introduction</a></li>
+						<li><a href="page1.html#b2">Brainstorming</a></li>
+						<li><a href="page1.html#b3">Cahier des charges</a></li>				
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page2.html" id="lien2">Prototype</a>
+					<ul id="slien2">
+						<li><a href="#b1">Introduction</a></li>
+						<li><a href="#b2">Théorie</a></li>
+						<li><a href="#b3">Conception</a></li>
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page3.html" id="lien3">Design</a>
+					<ul id="slien3">
+						<li><a href="page3.html#b1">Introduction</a></li>
+						<li><a href="page3.html#b2">Ajouts graphiques</a></li>
+						<li><a href="page3.html#b3">Ajout sonore</a></li>
+					</ul>
+				</li>
+				<li><a href="page4.html">Annexes</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<p>
+				<img id="slide2" src="../images/page2/slide/menu.jpg" alt="slide">
+			</p>
+
+			<div id="b1">
+
+				<h2>I]Introduction</h2>
+
+				<p>
+					Maintenant que nous avons défini les tâches à faire, nous allons pouvoir commencer. Le but de cette partie du processus est de réaliser une version du jeu très simpliste qui va permettre de tester toutes les fonctionnalités prévues pour notre jeu. Pour ce faire nous allons utiliser <a href="https://unity3d.com/fr" title="Unity">Unity</a>, un moteur de jeu qui facilite grandement le développement <a href="page4.html#b2" title="présentation du logiciel">[voir présentation du logiciel]</a>. Pour continuer, nous allons nous baser sur le cahier des charges de <a href="page1.html" title="Cahier des charges">la première page</a>. Mais avant de passer à la conception, laissons place à la théorie. Qu'est-ce que nous devons réellement faire ?
+				</p>
+
+			</div>
+
+			<div id="b2">
+
+				<h2>II]Théorie</h2>
+				
+				<p> Tout d'abord intéressons nous aux déplacements du joueur, sa mobilité principale est le "saut" et est effectué lorsque l'utilisateur clique sur son écran. Pour que notre personnage puisse sauter, il faut que l'on considère l'écran comme un repère en 2D d'axes X et Y. La position sur l'axe X du joueur va être modifiée à chaque clic pour qu'il puisse se déplacer verticalement.<br/>
+
+				<img src="../images/page2/expSaut.png" alt="repère explicatif"></p>
+					
+				<p> Pour ce qui est des obstacles, il va falloir faire apparaître ces derniers en plusieurs points différents à des intervalles de temps aléatoires et modifier leurs positions dès leurs apparitions. Pour cette fois, ces objets se déplaceront de manière horizontale. Eh oui ! Ce n'est pas le joueur qui se déplace, mais les obstacles ! Les mouvements du joueur horizontaux ne seront qu'une impression.<br/>
+				<img src="../images/page2/expObs.png" alt="repère explicatif"></p>
+
+				<p>
+					La destruction de ces obstacles sera nécessaire à chaque fois que ces derniers ne sont plus visible à l'écran. Inutile d'ordonner à ces objets de faire un quelconque mouvement si le joueur ne les voient plus, cela nous évitera les sacades et les pertes d'images par secondes. Lorsque les obstacles entreront en collision avec un objet précis ("barrière" sur le schema) ils seront détruits, on profitera de chaque destruction pour augmenter le score de notre joueur d'1 point.<br/>
+					<img src="../images/page2/expDes.png" alt="schéma explicatif">
+				</p>
+
+				<p>
+					Pour le reste des fonctionnalités, il suffira d'utiliser les possibilités qu'offre Unity. Nous pourrons aisément créer des boutons, activer ou désactiver des élements en fonction des choix de l'utilisateur.
+				</p>
+			</div>
+
+			<div id="b3">
+				<h2>III]Conception</h2>
+				<p>
+					Bien ! Nous savons dorénavant ce que nous devons faire, voyons maintenant comment cela se passe dans le moteur <a href="https://unity3d.com/fr" title="Unity">Unity</a>. Nous ne présentons ici que les tâches qui nous semblent les plus intéressantes, la création des menus et des boutons ne sont pas abordés, car cette tâche est aisément faite avec les possibilités qu'offre le moteur. Il nous faut beaucoup trop de place pour tout présenter.
+					
+				</p>
+
+				<p>
+					Pour pouvoir répondre au premier besoin, nous allons créer un objet "joueur" auquel on va attacher un "RigidBody2D". Ce qui permettra à notre "joueur" d'être soumis à la Physique du moteur, il sera alors affecté par la gravité et nous pourrons lui appliquer les forces que nous souhaitons.<br/>
+					<img src="../images/page2/rigidBody.png" alt="Ajout d'un RigidBody2D">
+				</p>
+
+				<p>
+					A partir de ce moment nous pouvons faire "sauter" notre joueur. nous allons alors lui ordonner d'augmenter sa vitesse verticalement, en modifiant sa vélocité à chaque clic:<br/>
+					<img src="../images/page2/sautCode.png" alt="Code saut du joueur">
+				</p>
+
+				<p>
+					Ca y est, notre joueur peut sauter ! C'est le moment de faire appraître nos obstacles. Pour ce faire nous allons créer plusieurs points d'apparitions pour ces derniers:<br/>
+					<img src="../images/page2/pointSpawn.png" alt="points d'apparitions">
+				</p> 
+
+				<p>
+					Et nous allons pouvoir faire apparaître nos obstacles en ces points. Il suffira d'utiliser une "Coroutine", une fonction spéciale qui est capable de mettre son exécution en "pause" sous certaines conditions et qui peut la reprendre là où elle était à son arrêt: <br/>
+					<img src="../images/page2/spawnCode.png" alt="lignes de codes">
+				</p>
+				<p>
+					La destruction des obstacles se fera simplement, en vérifiant si un objet entre en contact avec la barrière prévue à cet effet. Si c'est le cas, ce dernier sera détruit automatiquement:<br/>
+					<img src="../images/page2/barrePic.png" alt="image de la barrière">
+				</p>
+
+				<p>
+					Voici comment cela se passe au niveau du code:<br/>
+					<img src="../images/page2/desCode.png" alt="lignes de codes">
+				</p>
+
+				<p> Le procedé sera le même pour détecter si un obstacle est entré en contact avec le joueur. On pourra alors donner deux états à ce dernier: La vie et la mort, dans une variable booléenne. En fonction de sa valeur, nous pourrons faire apparaître l'écran "game-over". Après l'ajout de quelques boutons et quelques détails, notre prototype ressemble aux images qui défilent en haut de page. </p>
+			</div>
+		</main>
+
+		
+	<footer>
+		<nav>
+			<ul> 
+				<li>Notre Site</li>
+				<li> <a href="page1.html">Organisation</a> </li>
+				<li> <a href="page2.html">Prototype</a> </li>
+				<li> <a href="page3.html">Design</a> </li>
+				<li> <a href="page4.html">Annexes</a></li>
+			</ul>
+
+			<ul> 
+				<li>Téléchargez notre jeu</li>
+				<li><a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet">Cosmo Toilet</a></li>
+			</ul>
+
+			<ul> 
+				<li>Divers</li>
+				<li> <a href="https://play.google.com/intl/mr_fr/about/play-terms.html">Conditions d'utilisation</a> </li>
+				<li> <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialités</a> </li>
+				<li> <a href="https://support.google.com/googleplay/?hl=fr#topic=3364260">Aide Google Play</a> </li>
+				<li> <a href="https://www.youtube.com/watch?v=nq2cr1D3bvQ">Le sens de la vie</a></li>
+			</ul>
+		</nav>
+	</footer>
+	<script src="../js/mainmenu.js"></script>
+	<script src="../js/slideP1.js"></script>
+</body>
+</html>

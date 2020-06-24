@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../styles/style_pages.css">
+		<link rel="icon" type="image/png" href="../images/accueil/favicon/favicon.ico" />
+	</head>
+	<body>
+		<header>
+			<p id="btn_acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Acceuil"></a></p>
+			<p id="btn_menu"><img src="../images/menu/menu.png" alt="Menu"></p>
+		</header>
+		<nav id="menu_nav" class="menu_nav">
+			<ul id="menu_ul">
+				<li id="acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Icône" id="icn_acceuil">Acceuil</a></li>
+				<li class="menu_l1">					
+					<a href="page1.html" id="lien1">Organisation</a>
+					<ul id="slien1">
+						<li><a href="page1.html#b1">Introduction</a></li>
+						<li><a href="page1.html#b2">Brainstorming</a></li>
+						<li><a href="page1.html#b3">Cahier des charges</a></li>				
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page2.html" id="lien2">Prototype</a>
+					<ul id="slien2">
+						<li><a href="page2.html#b1">Introduction</a></li>
+						<li><a href="page2.html#b2">Théorie</a></li>
+						<li><a href="page2.html#b3">Conception</a></li>
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page3.html" id="lien3">Design</a>
+					<ul id="slien3">
+						<li><a href="#b1">Introduction</a></li>
+						<li><a href="#b2">Ajouts graphiques</a></li>
+						<li><a href="#b3">Ajout sonore</a></li>
+					</ul>
+				</li>
+				<li><a href="page4.html">Annexes</a></li>
+			</ul>
+		</nav>
+
+
+		<main>
+			<p>
+				<img id="slide3" src="../images/page3/menu.png" alt="slide">
+			</p>
+
+			<div id="b1">
+				<h3>I]Introduction</h3>
+					<p>
+						Nous avons maintenant un prototype fonctionnel, mais il faut maintenant donner vie à tout ça ! Nous voulons une toilette spatiale volante ! Dans cette partie nous allons tenter de rendre notre jeu plus vivant, en lui ajoutant des graphismes, des effets sonores et de la musique.
+					</p>
+			</div>
+
+			<div id="b2">
+				<h3>II]Ajouts graphiques</h3>
+					<p>
+					Pour cette partie du processus, nous allons utiliser un logiciel très simple d'utilisation et qui plus est gratuit, Piskel <a href="page4.html#b3" title="Piskel">[Voir présentation du logiciel]</a>. Ce dernier nous permettra de faire du "pixel-art", un style de dessin facile à prendre en main (quand ces dessins ne sont pas trop avancés). Nous avons donc commencé par dessiner ce qu'incarnera le joueur:<br/>
+					<img src="../images/page3/player_.png" alt="toilette">
+				</p>
+				<p>
+					Au niveau de l'integration dans le moteur <a href="https://unity3d.com/fr" title="Unity">Unity</a>, rien de très complexe nous allons changer l'image du "spriteRenderer" associée à notre objet Joueur (de la même manière nous changerons les images d'obstacles, ainsi que celles de l'interface):<br/>
+					<img src="../images/page3/spriteRenderer.png" alt="capture unity">
+				</p>
+
+				<p>
+					Nous avons ensuite dessiné une dizaine d'obstacles différents pour obtenir une certaine diversité d'objets:
+				</p>
+
+	    			<ul id="obsList">
+	    				<li><img src="../images/obstacles/COOKIE.png" alt="Cookie"></li>
+	    				<li><img src="../images/obstacles/PIZZZAAAA.png" alt="pizza"></li>
+	    				<li><img src="../images/obstacles/hamburger.png" alt="burger"></li>
+	    				<li><img src="../images/obstacles/earth.png" alt="planete"></li>
+	    				<li><img src="../images/obstacles/guitar.png" alt="guitare"></li>
+	    				<li><img src="../images/obstacles/Donuts.png" alt="Donuts"></li>
+	    				<li><img src="../images/obstacles/sushis.png" alt="sushis"></li>
+	    				<li><img src="../images/obstacles/SHIT.png" alt="Merde"></li>
+	    				<li><img src="../images/obstacles/banana.png" alt="banana"></li>
+
+	    			</ul>
+
+				<p>
+					Une fois cela fait nous avons dessiné plusieurs boutons et une image "game-over" afin de rendre l'interface utilisateur plus " attrayante". Nous avons aussi ajouté un système de particules (fonctionnalité qu'offre le moteur) pour donner une ambiance spatiale à notre niveau. Voilà à quoi ressemble notre jeu à ce stade:<br/>
+					<span>Menu d'acceuil du jeu:</span>
+					<img src="../images/page3/menu.png" alt="menu"><br/>
+					<span>Options du jeu:</span>
+					<img src="../images/page3/settings.png" alt="Options"><br/>
+					<span>Ecran de début de partie:</span>
+					<img src="../images/page3/start.png" alt="Debut de partie"><br/>
+					<span>Ecran de fin de partie:</span>
+					<img src="../images/page3/end.png" alt="Fin de partie"><br/>
+				</p>
+			</div>
+
+			<div id="b3">
+				<h3>III]Ajout sonore</h3>
+				<p>
+					Il nous reste maintenant à ajouter des effets sonores et de la musique pour plus d'immersion ! Dans cette partie du processus nous avons enregistré trois sons différents avec les micros de nos télephones:
+				
+				</p>
+				<ul>
+					<li>Un bruit pour les boutons.</li>
+					<li>Un bruit pour les sauts du joueur.</li>
+					<li>Un bruit pour l'explosion et la mort du joueur.</li>
+				</ul>
+
+				<p>Et nous les avons modifiés avec <a href="https://www.audacityteam.org/" title="Audacity">Audacity</a>, un logiciel d'édition de pistes sonores <a href="page4.html#b4" title="présentation du logiciel">[voir présentation du logiciel]</a>, pour enlever le maximum de bruit de fond. Puis nous les avons ajoutés au jeu grâce à des "Audios Sources" dans le niveau. Nous pourrons alors lancer ces différents sons aux événements que nous souhaiterons:<br/>
+					<img src="../images/page3/audioSource.png" alt="capture audioSource"></p>
+
+				<p> De la même manière, nous avons ajouté une musique qui tourne en boucle dans le jeu. Nous vous invitons à <a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet" title="CosmoToilet sur Android">télecharger le jeu</a> si vous souhaitez l'écouter.</p>
+
+			</div>
+			
+
+		</main>
+			
+	
+		<footer>
+			<nav>
+				<ul> 
+					<li>Notre Site</li>
+					<li> <a href="page1.html">Organisation</a> </li>
+					<li> <a href="page2.html">Prototype</a> </li>
+					<li> <a href="page3.html">Design</a> </li>
+					<li> <a href="page4.html">Annexes</a></li>
+				</ul>
+
+				<ul> 
+					<li>Téléchargez notre jeu</li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet">Cosmo Toilet</a></li>
+				</ul>
+
+				<ul> 
+					<li>Divers</li>
+					<li> <a href="https://play.google.com/intl/mr_fr/about/play-terms.html">Conditions d'utilisation</a> </li>
+					<li> <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialités</a> </li>
+					<li> <a href="https://support.google.com/googleplay/?hl=fr#topic=3364260">Aide Google Play</a> </li>
+					<li> <a href="https://www.youtube.com/watch?v=nq2cr1D3bvQ">Le sens de la vie</a></li>
+				</ul>
+			</nav>
+		</footer>
+		<script src="../js/mainmenu.js"></script>
+		<script src="../js/slideP1.js"></script>
+	</body>
+</html>

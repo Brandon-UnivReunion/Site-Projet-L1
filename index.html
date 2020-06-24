@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- La ligne 5 comporte une balise meta qui indique l'encodage utilisé dans mon fichier html. -->
+		<meta charset="utf-8">
+		<!-- La ligne 7 comporte une balise meta qui permet de définir les dimensions de la page Web. Ici, elle permet de s'adapter à n'importe quel écran. -->
+		<meta name="viewport" content="device-width, initial-scale=1.0">
+		<!-- La ligne 11 comporte une balise meta qui permet d'insérer une 'icone' dans l'onglet de la fenêtre. -->
+		<link rel="icon" type="image/png" href="images/accueil/favicon/favicon.ico" />
+		<!-- La ligne 14 comporte uen balise meta qui permet d'insérer la page css appelée. -->
+		<link rel="stylesheet" href="styles/style_index.css" />
+
+		<title>• Cosmo Toilet •</title>
+	</head>
+
+	<body>
+		<main>
+			<section>
+				<!--  Div du haut de page -->
+				<div>	
+					<p><img src="images/accueil/haut_de_page/cosmo_toilet.gif" alt="Fichier PNG du logo 'Cosmo Toilet. '. " title="Cosmo Toilet, ça en jete ! " id="cosmo_toilet" /></p>
+				</div>
+				<!-- div des parties/ autres pages du site -->
+				<div id="dl">
+					<h2> Télécharger le jeu : </h2>
+					<p><a id="modal-trigger" href="#modal" title="Play Store"> <img src="images/accueil/play_button/play_button.png" alt="Fichier PNG du bouton de téléchargement du jeu. '. " title="Pour télécharger, c'est par ici. " id="play_button"/></a></p>
+				</div>
+				<div id="modal"> <!-- this is our modal window -->
+					<div class="content">
+						<h2>Conditions d'utilisations : </h2>
+						<p>En appuyant sur le bouton 'Télécharger', vous acceptez <a class="fliens" href="https://play.google.com/intl/mr_fr/about/play-terms.html"> les Conditions d'utilisation de Google Play Store.</a> ainsi que <a class="fliens" href="https://policies.google.com/privacy?hl=fr">les Règles de confidentialités de Google.</a> Pour obtenir de l'aide, utilisez <a class="fliens" href="https://support.google.com/googleplay/?hl=fr#topic=3364260">Centre d'aide Google Play.</a></p>
+						<h3> Télécharger :</h3>
+						<button id="close-modal"><a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet"><img src="images/accueil/play_button/play_button1.png" alt="Fichier PNG du bouton de téléchargement du jeu. '. " title="Pour télécharger, c'est par ici. "/></a></button>
+					</div>
+				</div>
+			</section>
+
+			<section id="menu">
+				<div>
+					<h2 id="hmenu"> Menu </h2>
+				</div>
+				<div id="parties">
+					<a id="liensp1" href="html/page1.html" title="Lien vers la première partie: Organisation"> <img id="organisation" src="images/accueil/organisation/organisation.png" alt="Fichier PNG d'organisation." title="Organisation, cahier des charges. "/></a> 
+					<a id="liensp2" href="html/page2.html" title="Lien vers la première partie: Organisation"> <img id="prototype" src="images/accueil/prototype/prototype.png" alt="Fichier PNG de prototype." title="prototype du jeu. "/></a>
+					<a id="liensp3" href="html/page3.html" title="Lien vers la première partie: Organisation"> <img id="design" src="images/accueil/design/design.png" alt="Fichier PNG de design." title="Design, partie graphique et son. "/>
+					</a>
+					<a id="liensp4" href="html/page4.html" title="Lien vers la première partie: Organisation"> <img id="annexe" src="images/accueil/annexe/annexe.png" alt="Fichier PNG d'annexe'." title="Annexe, ressources. "/></a>
+				</div>
+			</section>
+		</main>
+	
+
+		<footer>
+			<nav>
+				<ul> 
+					<li class="gras">Notre Site</li>
+					<li> <a href="page1.html">Organisation</a> </li>
+					<li> <a href="page2.html">Prototype</a> </li>
+					<li> <a href="page3.html">Design</a> </li>
+					<li> <a href="page4.html">Annexes</a></li>
+				</ul>
+
+				<ul> 
+					<li class="gras">Téléchargez notre jeu</li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet">Cosmo Toilet</a></li>
+				</ul>
+
+				<ul> 
+					<li class="gras">Divers</li>
+					<li> <a href="https://play.google.com/intl/mr_fr/about/play-terms.html">Conditions d'utilisation</a> </li>
+					<li> <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialités</a> </li>
+					<li> <a href="https://support.google.com/googleplay/?hl=fr#topic=3364260">Aide Google Play</a> </li>
+					<li> <a href="https://www.youtube.com/watch?v=nq2cr1D3bvQ">Le sens de la vie</a></li>
+				</ul>
+			</nav>
+		</footer>
+		<script src="js/jsaccueil.js"></script>
+	</body>
+</html>	

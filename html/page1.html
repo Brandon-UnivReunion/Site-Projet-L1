@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Organisation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../styles/style_pages.css">
+		<link rel="icon" type="image/png" href="../images/accueil/favicon/favicon.ico" />
+	</head>
+	<body>
+		<header>
+			<p id="btn_acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Acceuil"></a></p>
+			<p id="btn_menu"><img src="../images/menu/menu.png" alt="Menu"></p>
+		</header>
+		<nav id="menu_nav" class="menu_nav">
+			<ul id="menu_ul">
+				<li id="acceuil"><a href="../index.html"><img src="../images/menu/acceuil.png" alt="Icône" id="icn_acceuil">Acceuil</a></li>
+				<li class="menu_l1">					
+					<a href="page1.html" id="lien1">Organisation</a>
+					<ul id="slien1">
+						<li><a href="#b1">Introduction</a></li>
+						<li><a href="#b2">Brainstorming</a></li>
+						<li><a href="#b3">Cahier des charges</a></li>				
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page2.html" id="lien2">Prototype</a>
+					<ul id="slien2">
+						<li><a href="page2.html#b1">Introduction</a></li>
+						<li><a href="page2.html#b2">Théorie</a></li>
+						<li><a href="page2.html#b3">Conception</a></li>
+					</ul>
+				</li>
+				<li class="menu_l1">
+					<a href="page3.html" id="lien3">Design</a>
+					<ul id="slien3">
+						<li><a href="page3.html#b1">Introduction</a></li>
+						<li><a href="page3.html#b2">Ajouts graphiques</a></li>
+						<li><a href="page3.html#b3">Ajout sonore</a></li>
+					</ul>
+				</li>
+				<li><a href="page4.html">Annexes</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<p>
+				<img id="slide1" src="../images/page1/slide/menu.png" alt="slide">
+			</p>
+			
+			
+				
+			<!-- Cette div comporte le premier paragraphe "Introduction". -->
+			<div id="b1">
+
+				<h1>I]Introduction</h1>
+
+				<p>La première question qui vient à l'esprit lorsqu'on se lance dans ce type de projet est: «OK, vouloir créer un jeu c'est bien! Mais par où et comment commencer?». C'est à ce moment précis qu'il faut organiser ses idées et avoir une liste des tâches ordonnée dans un document. Celui-ci se nomme le: «Le Cahier des charges». Il contient tout ce qui concerne notre projet (idée de base,tâches..) et  permet de savoir exactement tout ce que l'on doit faire. Nous ne sommes que des amateurs, et par conséquent nous n'avons pas eu de normes précises pour concevoir ce cahier, mais voici comment nous avons procédé.</p>
+
+			</div>
+
+			<!-- Cette div comporte le deuxième paragraphe "Brainstorming". -->
+			<div id="b2">
+
+				<h1>II]Brainstorming</h1>
+				<p>Tout d'abord nous avons du trouver une idée sur laquelle notre projet aller se baser.Nous savons tous que «l'inspiration» n'est jamais présente lorsqu'on en a besoin. Pour remédier à ce problème, nous nous sommes alors tous réunis autour d'une feuille A4 et nous avons écrit sur cette dernière ce qui nous venait à l'esprit. Parmi tous les mots qui figuraient sur la feuille, vous pouvez deviner lequel a su se démarquer des autres: le mot «Toilette» (merci à notre maturité). Nous avons alors trouvé de cette manière le thème principal de notre jeu ainsi que son but(qui se résume en une phrase): Le joueur qui incarne une toilette doit éviter des objets dans l'espace (oui dans l'espace).Nous avons alors organisé sous forme d'un schema toutes les actions que le joueur peut effectuer en fonction des différents écrans (Menu d'acceuil,options et niveau). Le voici:
+
+				<br/><img src="../images/page1/diagramActions.png" alt="Schema"></p>
+
+				<p>C'est à partir de ce moment que nous pouvons écrire dans un document toutes les étapes que nous avons à faire. Pour notre part, nous avons découper la réalisation du jeu en deux étapes. Pour la première, il s'agit de réaliser une version du jeu minimaliste, un prototype sans aspect graphique pour pouvoir mettre en place toutes les fonctionnalités du jeu. Ensuite, pour ce qui est de la deuxième étape, ajouter tout l'aspect «design» du jeu. Nous avons pu alors résumer tout ce que l'on devait faire dans notre cahier des charges.</p>
+
+			</div>
+			<!-- Cette div comporte le troisième paragraphe "Cahier des charges". -->
+			<div id="b3">
+
+				<h1>III]Cahier des charges</h1>
+				<!-- Cette div comporte le cahier des charges pour le prototype -->
+				<div id="prototype">
+					<h2>Prototype:</h2>
+
+						<ul>
+
+							<li><span>Contrôles du joueur: </span> Le joueur prend de l'altitude en appuyant sur son écran et en perd lorsqu’aucune action n'est exercée sur l'écran.</li>
+
+							<li><span>Apparition aléatoire d'obstacles:</span> Des 'spawners' font apparaître à des intervalles de temps aléatoires des obstacles.</li>
+
+							<li><span>Collision entre le joueur et les obstacles:</span>Lorsque le joueur entre en collision avec un obstacle, il meurt. Le joueur meurt aussi en allant hors des limites l'écran.</li>
+
+							<li><span>Informations de score: </span> Le score est calculé en fonction des obstacles évités par le joueur. Le score est affiché en haut de l'écran.</li>
+
+							<li><span>Mort du joueur: </span> Lorsque le joueur meurt, un écran "Game-Over" apparaît. Cet écran permet aussi de recommencer une partie ou de retourner au menu.</li>
+
+							<li><span>Menu d'acceuil: </span> Le joueur peut commencer une partie, ou changer certaines options(langues,audio).</li>
+
+						</ul>
+				</div>
+				<!-- Cette div comporte le cahier des charges pour le design -->
+				<div id="design">
+					<h2>Design:</h2>
+
+					<h3>Partie graphique:</h3>
+
+					<ul>
+						<li><span>Personnage: </span> Création de la toilette et des animations (propulsion et explosion).</li>
+
+						<li><span>Obstacles: </span>Création de différents obstacles.</li>
+
+						<li><span>Fond: </span>Ajout d'un fond et d'étoiles pour donner un effet "d'espace".</li>
+
+						<li><span>"Game-over": </span>Création d'une image "game-over".</li>
+
+						<li><span>Police: </span>Mise en place d'une police plus appropriée.</li>
+
+						<li><span>Boutons: </span>Réalisation des différents boutons.</li>
+					</ul>
+
+					<h3>Partie sonore:</h3>
+
+					<ul>
+						<li><span>Bruit du personnage: </span>Bruit de la propulsion et de l'explosion.</li>
+						<li><span>Ambiance: </span>Création d'une musique simpliste.</li>
+						<li><span>Interface: </span>Bruit des différents boutons.</li>
+					</ul>
+					
+				</div>
+
+			</div>
+
+		</main>
+			
+
+		<footer>
+			<nav>
+				<ul> 
+					<li>Notre Site</li>
+					<li> <a href="page1.html">Organisation</a> </li>
+					<li> <a href="page2.html">Prototype</a> </li>
+					<li> <a href="page3.html">Design</a> </li>
+					<li> <a href="page4.html">Annexes</a></li>
+				</ul>
+
+				<ul> 
+					<li>Téléchargez notre jeu</li>
+					<li><a href="https://play.google.com/store/apps/details?id=com.CkfLab.CosmoToilet">Cosmo Toilet</a></li>
+				</ul>
+
+				<ul> 
+					<li>Divers</li>
+					<li> <a href="https://play.google.com/intl/mr_fr/about/play-terms.html">Conditions d'utilisation</a> </li>
+					<li> <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialités</a> </li>
+					<li> <a href="https://support.google.com/googleplay/?hl=fr#topic=3364260">Aide Google Play</a> </li>
+					<li> <a href="https://www.youtube.com/watch?v=nq2cr1D3bvQ">Le sens de la vie</a></li>
+				</ul>
+			</nav>
+		</footer>
+		<script src="../js/mainmenu.js"></script>
+		<script src="../js/slideP1.js"></script>
+	</body>
+</html>

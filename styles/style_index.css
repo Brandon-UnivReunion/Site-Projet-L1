@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
+
+html{
+	background-image: url("../images/background/stars.gif");
+}
+
+body{
+	margin: 0px	;
+	font-family: 'Raleway', Verdana, sans-serif;
+	color: black;
+}
+
+p{
+	margin: 0;
+	font-size: 2em;
+	text-align: center;
+}
+
+h2{
+	color: black;
+	font-size: 4em;
+	font-family: 'Raleway', Verdana, sans-serif;	
+	text-align: center;
+}
+
+img{
+	width:100%;
+}
+
+#cosmo_toilet{
+    width: 40%;						
+}
+
+#dl{
+	background-color: #e5e5e5;
+	padding-top: 5em;
+	margin-top: 5em;
+}
+
+#play_button{
+    width: 30%;    
+    }
+
+#menu{
+	background-color: white;
+}
+
+#hmenu{
+	margin-top: 0;
+}
+
+#parties{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#liensp1{
+	width: 40%;
+	margin-top: 5em;
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+#liensp2{
+	width: 40%;
+	margin-top: 5em;
+	border-radius: 2em;
+	overflow: hidden;
+
+}
+
+#liensp3{
+	width: 40%;
+	margin-top: 5em;
+	margin-bottom: 5em;
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+#liensp4{
+	width: 40%;
+	margin-top: 5em;
+	margin-bottom: 5em;
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+
+/* la fenêtre sera empilé sur la page principale du site, en respectant le 'viewport', la taille de l'écran. La couleur de fond diffère afin de distinguer l'empilement. Display flex va servir à centrer la fenêtre*/
+/* Les Trois dernières lignes servent à cacher la petite fenêtre */
+#modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(100, 100, 100, 0.5);
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s, visibility 1s;
+}
+
+/* Permet l'affichage de la fenêtre (Opacity: 1=nous la voyons totalement, visibility= cacher un élément tout en gardant occupé l'espace). */
+#modal.is-visible{
+	opacity: 1;
+	visibility: visible;
+}
+
+/*Paramètres de la fenêtre ( fond de couleur, taille). */
+.content{
+	background-color: #f0f0f1;
+	width: 110%;
+	padding: 1em;
+	margin: auto;
+	max-width: 550px;
+}
+
+/*Paramètres des textes qui s'affichent dans la fenêtre( Taille, hauteur d'interligne). */
+#modal p{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+#modal h2{
+	margin-top: 0px;
+	font-size: 2em;
+}
+
+#modal h3{
+	text-align: center;
+}
+
+/* Paramètre du bouton ( centrer le bouton, rendre le curseur en mode 'pointeur'). */
+#modal button{
+	display: block;
+	margin:auto;
+	border: 0px;
+	width: 40%;	
+	cursor: pointer;
+
+}
+.fliens{
+	color: #f37145;
+}
+
+#modal a:hover{
+	color:#d33c24; 
+}
+
+
+/*Regles pour le footer*/
+footer{
+	margin: auto;
+	line-height: 2;
+	text-align: center;
+	padding: 30px ;
+	background: #e5e5e5;
+}
+
+nav{
+	display: flex;
+	margin: auto;
+	width: 65%;
+}
+
+nav ul{
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav ul li{
+	color: black;
+}
+
+nav ul li a{
+	color: #f37145;
+	text-decoration: none; 
+}
+nav ul li a:hover{
+	color: #d33c24;
+}
+/*Règles pour le responsive design*/
+@media (max-width: 600px) {
+  #obsList {
+    flex-direction: column;
+  }
+  nav {
+  	flex-direction: column;	
+  }
+}
+
+.gras{
+	font-weight: bolder;
+}
+
+
+
